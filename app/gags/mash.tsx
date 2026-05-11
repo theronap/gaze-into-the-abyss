@@ -19,41 +19,19 @@ interface Categories {
 }
 
 function computeEliminations(cats: string[][]): number[][] {
-  // Returns list of [catIdx, itemIdx] to eliminate, in order
-  const n = 3 + Math.floor(Math.random() * 3); // elimination number 3-5
-  const alive: boolean[][] = cats.map((cat) => cat.map(() => true));
-  const result: number[][] = [];
-
-  const isDone = () => cats.every((_, ci) => alive[ci].filter(Boolean).length <= 1);
-
-  // flat interleaved list: [c0i0, c1i0, c2i0, c3i0, c0i1, ...]
-  const flat: number[][] = [];
-  const maxLen = Math.max(...cats.map((c) => c.length));
-  for (let j = 0; j < maxLen; j++) {
-    for (let i = 0; i < cats.length; i++) {
-      if (j < cats[i].length) flat.push([i, j]);
+  // Randomly pick one survivor per category, then shuffle the rest as elimination order
+  const survivors = cats.map((cat) => Math.floor(Math.random() * cat.length));
+  const toEliminate: number[][] = [];
+  for (let ci = 0; ci < cats.length; ci++) {
+    for (let ii = 0; ii < cats[ci].length; ii++) {
+      if (ii !== survivors[ci]) toEliminate.push([ci, ii]);
     }
   }
-
-  let count = 0;
-  let pos = 0;
-  let guard = 0;
-
-  while (!isDone() && guard < 500) {
-    guard++;
-    const [ci, ii] = flat[pos % flat.length];
-    pos++;
-    if (!alive[ci][ii]) continue;
-    if (alive[ci].filter(Boolean).length <= 1) continue;
-    count++;
-    if (count === n) {
-      alive[ci][ii] = false;
-      result.push([ci, ii]);
-      count = 0;
-    }
+  for (let i = toEliminate.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [toEliminate[i], toEliminate[j]] = [toEliminate[j], toEliminate[i]];
   }
-
-  return result;
+  return toEliminate;
 }
 
 function HouseIcon() {
