@@ -7,6 +7,16 @@ import Problem from "./gags/problem";
 import Rps from "./gags/rps";
 import Horoscope from "./gags/horoscope";
 import Overthinking from "./gags/overthinking";
+import RedFlag from "./gags/redFlag";
+import Villain from "./gags/villain";
+import Apology from "./gags/apology";
+import SpiritAnimal from "./gags/spiritAnimal";
+import Cooked from "./gags/cooked";
+import Affirmation from "./gags/affirmation";
+import StartupName from "./gags/startupName";
+import GiveUp from "./gags/giveUp";
+import Excuse from "./gags/excuse";
+import Reply from "./gags/reply";
 
 const GAG_COMPONENTS: Record<string, React.ComponentType> = {
   stove: Stove,
@@ -14,6 +24,16 @@ const GAG_COMPONENTS: Record<string, React.ComponentType> = {
   rps: Rps,
   horoscope: Horoscope,
   overthinking: Overthinking,
+  redFlag: RedFlag,
+  villain: Villain,
+  apology: Apology,
+  spiritAnimal: SpiritAnimal,
+  cooked: Cooked,
+  affirmation: Affirmation,
+  startupName: StartupName,
+  giveUp: GiveUp,
+  excuse: Excuse,
+  reply: Reply,
 };
 
 export default function Home() {
@@ -57,21 +77,10 @@ export default function Home() {
         }}
       >
         <div>
-          <p style={{
-            fontSize: "0.65rem",
-            letterSpacing: "0.3em",
-            textTransform: "uppercase",
-            color: "var(--muted)",
-            marginBottom: "0.2rem",
-          }}>
+          <p style={{ fontSize: "0.65rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.2rem" }}>
             You have been chosen
           </p>
-          <h1 style={{
-            fontSize: "1.1rem",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            color: "var(--fg)",
-          }}>
+          <h1 style={{ fontSize: "1.1rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--fg)" }}>
             Gaze into the Abyss
           </h1>
         </div>
@@ -84,20 +93,9 @@ export default function Home() {
         <GagComponent />
       </main>
 
-      <footer style={{
-        borderTop: "1px solid var(--border)",
-        padding: "1.5rem 2rem",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "1rem",
-      }}>
+      <footer style={{ borderTop: "1px solid var(--border)", padding: "1.5rem 2rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem" }}>
         <div className="ad-slot">Advertisement</div>
-        <p style={{
-          fontSize: "0.65rem",
-          color: "var(--muted)",
-          letterSpacing: "0.1em",
-        }}>
+        <p style={{ fontSize: "0.65rem", color: "var(--muted)", letterSpacing: "0.1em" }}>
           {current.title}
         </p>
       </footer>
