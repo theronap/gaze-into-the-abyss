@@ -17,6 +17,19 @@ import StartupName from "./gags/startupName";
 import GiveUp from "./gags/giveUp";
 import Excuse from "./gags/excuse";
 import Reply from "./gags/reply";
+import BongoCat from "./gags/bongoCat";
+import Mash from "./gags/mash";
+import WhatIsWrong from "./gags/whatIsWrong";
+import SlotMachine from "./gags/slotMachine";
+import LifeSupport from "./gags/lifeSupport";
+import AnxietyTranslator from "./gags/anxietyTranslator";
+import ExistentialClicker from "./gags/existentialClicker";
+import DialUp from "./gags/dialUp";
+import SearchHistory from "./gags/searchHistory";
+import Compatibility from "./gags/compatibility";
+import Negotiator from "./gags/negotiator";
+import CatOpinion from "./gags/catOpinion";
+import NapOptimizer from "./gags/napOptimizer";
 
 const GAG_COMPONENTS: Record<string, React.ComponentType> = {
   stove: Stove,
@@ -34,6 +47,19 @@ const GAG_COMPONENTS: Record<string, React.ComponentType> = {
   giveUp: GiveUp,
   excuse: Excuse,
   reply: Reply,
+  bongoCat: BongoCat,
+  mash: Mash,
+  whatIsWrong: WhatIsWrong,
+  slotMachine: SlotMachine,
+  lifeSupport: LifeSupport,
+  anxietyTranslator: AnxietyTranslator,
+  existentialClicker: ExistentialClicker,
+  dialUp: DialUp,
+  searchHistory: SearchHistory,
+  compatibility: Compatibility,
+  negotiator: Negotiator,
+  catOpinion: CatOpinion,
+  napOptimizer: NapOptimizer,
 };
 
 export default function Home() {

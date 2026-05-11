@@ -90,6 +90,71 @@ export const gags: Gag[] = [
     title: "Should I Reply?",
     theme: { bg: "#0d1117", fg: "#e6edf3", accent: "#58a6ff", muted: "#484f58", border: "#21262d", card: "#161b22" },
   },
+  {
+    id: "bongoCat",
+    title: "Bongo Cat",
+    theme: { bg: "#1a1a2a", fg: "#f0f0ff", accent: "#ff9933", muted: "#555577", border: "#2a2a44", card: "#222236" },
+  },
+  {
+    id: "mash",
+    title: "M.A.S.H.",
+    theme: { bg: "#fffef5", fg: "#1a1a2a", accent: "#ff6b9d", muted: "#888880", border: "#e8e0d0", card: "#f7f5e8", btnFg: "#ffffff" },
+  },
+  {
+    id: "whatIsWrong",
+    title: "What Is Wrong With Me?",
+    theme: { bg: "#f5f9ff", fg: "#0a1a3a", accent: "#0055dd", muted: "#7788aa", border: "#c0d0e8", card: "#e8f0f8", btnFg: "#ffffff" },
+  },
+  {
+    id: "slotMachine",
+    title: "Slot Machine of Regrets",
+    theme: { bg: "#0d0005", fg: "#ffd700", accent: "#cc0033", muted: "#660022", border: "#330011", card: "#1a000a" },
+  },
+  {
+    id: "lifeSupport",
+    title: "Life Support Chat",
+    theme: { bg: "#f4f6f8", fg: "#1a2030", accent: "#0077cc", muted: "#8899aa", border: "#d0dae8", card: "#e8eef4", btnFg: "#ffffff" },
+  },
+  {
+    id: "anxietyTranslator",
+    title: "Anxiety Translator",
+    theme: { bg: "#0e0818", fg: "#e8deff", accent: "#aa77ff", muted: "#443366", border: "#221144", card: "#160d22" },
+  },
+  {
+    id: "existentialClicker",
+    title: "The Button",
+    theme: { bg: "#050505", fg: "#bbbbbb", accent: "#ffffff", muted: "#333333", border: "#111111", card: "#0d0d0d" },
+  },
+  {
+    id: "dialUp",
+    title: "Dial-Up Simulator",
+    theme: { bg: "#000800", fg: "#33ff33", accent: "#00ff00", muted: "#005500", border: "#002200", card: "#000f00", btnFg: "#000800" },
+  },
+  {
+    id: "searchHistory",
+    title: "Haunted by Your Search History",
+    theme: { bg: "#202124", fg: "#e8eaed", accent: "#8ab4f8", muted: "#5f6368", border: "#3c4043", card: "#292a2d" },
+  },
+  {
+    id: "compatibility",
+    title: "Compatibility Report",
+    theme: { bg: "#0f0006", fg: "#ffccdd", accent: "#ff2266", muted: "#661133", border: "#330022", card: "#1a000d" },
+  },
+  {
+    id: "negotiator",
+    title: "The Negotiator",
+    theme: { bg: "#111215", fg: "#d0d5dd", accent: "#44aaff", muted: "#445566", border: "#1e2533", card: "#171a22" },
+  },
+  {
+    id: "catOpinion",
+    title: "The Cat's Opinion of You",
+    theme: { bg: "#1a0f00", fg: "#ffe8cc", accent: "#ff8844", muted: "#663300", border: "#2a1500", card: "#221200" },
+  },
+  {
+    id: "napOptimizer",
+    title: "Nap Optimizer",
+    theme: { bg: "#f0f8ff", fg: "#0a2040", accent: "#0066cc", muted: "#6688aa", border: "#b8d4ee", card: "#deeeff", btnFg: "#ffffff" },
+  },
 ];
 
 export function getRandomGag(excludeId?: string): Gag {
