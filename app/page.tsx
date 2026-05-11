@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { getRandomGag, type Gag } from "@/lib/gag-registry";
+import { gags, getNextGag, type Gag } from "@/lib/gag-registry";
 import Stove from "./gags/stove";
 import Problem from "./gags/problem";
 import Rps from "./gags/rps";
@@ -37,12 +37,13 @@ const GAG_COMPONENTS: Record<string, React.ComponentType> = {
 };
 
 export default function Home() {
-  const [current, setCurrent] = useState<Gag>(() => getRandomGag());
+  // TODO: TESTING ONLY — restore: useState<Gag>(() => getRandomGag()) and next() calling getRandomGag(current.id)
+  const [current, setCurrent] = useState<Gag>(() => gags[0]);
   const GagComponent = GAG_COMPONENTS[current.id];
   const { theme } = current;
 
   function next() {
-    setCurrent(getRandomGag(current.id));
+    setCurrent(getNextGag(current.id));
   }
 
   const themeVars = {

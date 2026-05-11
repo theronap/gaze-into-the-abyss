@@ -96,3 +96,9 @@ export function getRandomGag(excludeId?: string): Gag {
   const pool = excludeId ? gags.filter((g) => g.id !== excludeId) : gags;
   return pool[Math.floor(Math.random() * pool.length)];
 }
+
+// TODO: TESTING ONLY — remove getNextGag and restore random cycling in page.tsx
+export function getNextGag(currentId: string): Gag {
+  const idx = gags.findIndex((g) => g.id === currentId);
+  return gags[(idx + 1) % gags.length];
+}
